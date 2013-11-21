@@ -1,0 +1,45 @@
+@import url(http://fonts.googleapis.com/css?family=Rambla:400,700|Noticia+Text);
+
+body {
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: "Noticia Text", serif;
+}
+
+section {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+p {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  position: absolute;
+  top: 25%;
+}
+
+a#vieux {
+  font-family: "Rambla", sans-serif;
+  color: rgba(255,255,255,0.4);
+  padding: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-decoration: none;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+a#vieux:hover {
+  color: rgba(255,255,255,0.7);
+}

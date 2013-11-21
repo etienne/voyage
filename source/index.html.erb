@@ -1,10 +1,8 @@
 ---
-title: Welcome to Middleman
+title: Pochour.com – Parmi les meilleures sources de nouvelles de moi en retard
 ---
 
-<div class="welcome">
-  <h1>Middleman is Watching</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+<a href="http://musee.pochour.com/" id="vieux">Non, je veux l’ancienne affaire</a>
+<% Dir["#{File.dirname(__FILE__)}/posts/*.erb"].reverse.each do |file| %>
+<%= post_section(file) %>
+<% end %>
