@@ -1,10 +1,19 @@
-@import url(http://fonts.googleapis.com/css?family=Rambla:400,700|Noticia+Text);
+@import url(http://fonts.googleapis.com/css?family=Changa+One|Noticia+Text);
 
 body {
   color: white;
   margin: 0;
   padding: 0;
   font-family: "Noticia Text", serif;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.small-sans {
+  font-family: "Changa One", sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 section {
@@ -14,6 +23,7 @@ section {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  padding: 20px;
 }
 
 p {
@@ -27,19 +37,28 @@ p {
 }
 
 a#vieux {
-  font-family: "Rambla", sans-serif;
+  @extend .small-sans;
   color: rgba(255,255,255,0.4);
   padding: 20px;
-  font-weight: bold;
   position: absolute;
   top: 0;
   right: 0;
   text-decoration: none;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 a#vieux:hover {
   color: rgba(255,255,255,0.7);
+}
+
+div.info {
+  time {
+    @extend .small-sans;
+    padding: 8px 10px 8px 0;
+    margin-right: 10px;
+    border-right: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  .location {
+    color: rgba(255,255,255,0.5);
+  }
 }
