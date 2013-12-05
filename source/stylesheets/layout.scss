@@ -23,7 +23,6 @@ section {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  padding: 20px;
 }
 
 p {
@@ -51,14 +50,12 @@ a#vieux:hover {
 }
 
 div.info {
+  margin: 20px;
+  
   time {
     @extend .small-sans;
     padding: 8px 10px 8px 0;
     margin-right: 10px;
     border-right: 1px solid rgba(255,255,255,0.2);
-  }
-  
-  .location {
-    color: rgba(255,255,255,0.5);
   }
 }
