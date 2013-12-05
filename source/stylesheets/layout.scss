@@ -25,28 +25,21 @@ section {
   background-repeat: no-repeat;
 }
 
-p {
-  text-align: center;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 40px;
-  position: absolute;
-  top: 25%;
-}
-
 a#vieux {
   @extend .small-sans;
-  color: rgba(255,255,255,0.4);
-  padding: 20px;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: white;
+  opacity: 0.3;
+  margin: 20px;
+  padding: 4px 8px;
   position: absolute;
   top: 0;
   right: 0;
   text-decoration: none;
-}
 
-a#vieux:hover {
-  color: rgba(255,255,255,0.7);
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 div.info {
@@ -56,6 +49,10 @@ div.info {
     @extend .small-sans;
     padding: 8px 10px 8px 0;
     margin-right: 10px;
-    border-right: 1px solid rgba(255,255,255,0.2);
+    border-right: 1px solid rgba(255,255,255,0.35);
+  }
+  
+  .description {
+    opacity: 0.8;
   }
 }
