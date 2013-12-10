@@ -3,12 +3,16 @@ section#post-001 {
 }
 
 section#post-002 {
-  background-color: rgb(56, 161, 162);
-  background-image: url("../images/vignette.png");
+  background-color: #a5d3dd;
+//  background-image: url("../images/vignette.png");
 //  color: #333;
   
-  div.info time {
-//    border-right-color: rgba(0,0,0,0.25);
+  div.info {
+//    color: #13aaca;
+    
+    time {
+//      border-right-color: rgba(19,170,212,0.35);
+    }
   }
 }
 
