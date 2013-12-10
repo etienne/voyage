@@ -52,6 +52,11 @@ div.info {
     margin-right: 10px;
     border-right: 1px solid rgba(255,255,255,0.35);
   }
+  
+  span.counter {
+    @extend .small-sans;
+    margin-left: 5px;
+  }
 }
 
 div.text {
