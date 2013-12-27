@@ -3,6 +3,11 @@
 source 'http://rubygems.org'
 
 gem "middleman", "~>3.2.0"
-
-# Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
+gem "middleman-blog"
+gem "i18n"
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end

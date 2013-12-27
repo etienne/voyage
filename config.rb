@@ -71,3 +71,13 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+activate :blog do |blog|
+  blog.prefix = "posts"
+  blog.sources = "/{year}-{month}-{day}-{title}.html"
+  blog.new_article_template = "source/article_template.erb"
+  blog.default_extension = ".md"
+end
+
+Time.zone = "Madrid"
+I18n.default_locale = :fr

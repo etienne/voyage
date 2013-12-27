@@ -2,7 +2,22 @@
 title: Pochour.com – Parmi les meilleures sources de nouvelles de moi en retard
 ---
 
-<% Dir["#{File.dirname(__FILE__)}/posts/*.erb"].reverse.each do |file| %>
-<%= post_section(file) %>
+<% blog.articles.each do |article| %>
+<section id="<%= article.slug %>"<%= ' class="text"' if article.data['is_text'] %>>
+  <div class="info">
+    <time datetime="<%= article.date.strftime("%Y-%m-%d") %>2013-10-28"><%= I18n.localize(article.date, format: "%-d %B %Y") %></time><span class="description">
+      <%= article.data['description'] %>
+      <% if defined? article.data['counter'] %>
+        <span class="counter"><%= article.data['counter'] %></span>
+      <% end %>
+    </span>
+  </div>
+  <% unless article.body.empty? %>
+    <div class="body">
+      <%= article.body %>
+    </div>
+  <% end %>
+</section>
 <% end %>
+
 <a href="http://musee.pochour.com/" id="vieux">Non, je veux l’ancienne affaire</a>

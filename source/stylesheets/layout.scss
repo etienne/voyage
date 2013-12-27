@@ -59,27 +59,29 @@ div.info {
   }
 }
 
-div.text {
-  margin: 72px auto 0;
-  color: rgba(0,0,0,0.75);
-  font-size: 20px;
-  line-height: 29px;
-  width: 580px;
+section.text {
+  div.body {
+    margin: 72px auto 0;
+    color: rgba(0,0,0,0.75);
+    font-size: 20px;
+    line-height: 29px;
+    width: 580px;
   
-  p {
-    margin: 0 0 10px;
-  }
+    p {
+      margin: 0 0 10px;
+    }
   
-  dt {
-    @extend .small-sans;
-    font-size: 14px;
-    line-height: 24px;
-    margin: 0;
-    opacity: 0.9;
-//    color: rgb(56, 161, 162);
-  }
+    dt {
+      @extend .small-sans;
+      font-size: 14px;
+      line-height: 24px;
+      margin: 0;
+      opacity: 0.9;
+  //  color: rgb(56, 161, 162);
+    }
   
-  dd {
-    margin: 0;
+    dd {
+      margin: 0;
+    }
   }
 }
