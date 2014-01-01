@@ -24,6 +24,49 @@ section {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  
+  &.text {
+    background-color: #a5d3dd;
+  
+    div.body {
+      margin: 72px auto 0;
+      color: rgba(0,0,0,0.75);
+      font-size: 20px;
+      line-height: 29px;
+      width: 580px;
+  
+      p {
+        margin: 0 0 10px;
+      }
+  
+      dt {
+        @extend .small-sans;
+        font-size: 14px;
+        line-height: 24px;
+        margin: 0;
+        opacity: 0.9;
+    //  color: rgb(56, 161, 162);
+      }
+  
+      dd {
+        margin: 0;
+      }
+      
+      ul {
+        list-style: none;
+        margin: 0 0 10px;
+        padding: 0;
+        text-indent: -30px;
+        
+        li:before {
+          float: left;
+          content: '—';
+          width: 30px;
+          opacity: 0.4;
+        }
+      }
+    }
+  }
 }
 
 a#vieux {
@@ -56,32 +99,5 @@ div.info {
   span.counter {
     @extend .small-sans;
     margin-left: 5px;
-  }
-}
-
-section.text {
-  div.body {
-    margin: 72px auto 0;
-    color: rgba(0,0,0,0.75);
-    font-size: 20px;
-    line-height: 29px;
-    width: 580px;
-  
-    p {
-      margin: 0 0 10px;
-    }
-  
-    dt {
-      @extend .small-sans;
-      font-size: 14px;
-      line-height: 24px;
-      margin: 0;
-      opacity: 0.9;
-  //  color: rgb(56, 161, 162);
-    }
-  
-    dd {
-      margin: 0;
-    }
   }
 }
