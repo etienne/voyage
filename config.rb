@@ -39,14 +39,8 @@
 # activate :livereload
 
 # Methods defined in the helpers block are available in templates
-helpers do
-  def post_section(file)
-    id = "post-#{File.basename(file, '.html.erb').split('-').first}"
-    content_tag(:section, id: id) do
-      IO.read(file)
-    end
-  end
-end
+# helpers do
+# end
 
 set :css_dir, 'stylesheets'
 
