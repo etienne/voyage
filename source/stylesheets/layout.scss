@@ -26,8 +26,12 @@ section {
   background-repeat: no-repeat;
   
   &.text {
-    background-color: #a5d3dd;
-  
+    background-image: url("../images/vignette.png");
+    
+    div.info {
+      text-shadow: none;
+    }
+    
     div.body {
       margin: 72px auto 0;
       color: rgba(0,0,0,0.75);
@@ -38,7 +42,13 @@ section {
       p {
         margin: 0 0 10px;
       }
-  
+      
+      blockquote {
+        margin: 0 0 10px 24px;
+        font-size: 18px;
+        opacity: 0.7;
+      }
+      
       dt {
         @extend .small-sans;
         font-size: 14px;
@@ -87,13 +97,17 @@ a#vieux {
 }
 
 div.info {
+  text-shadow: 0 0 30px rgba(0, 0, 0, 1);;
   margin: 20px;
   
   time {
     @extend .small-sans;
-    padding: 8px 10px 8px 0;
-    margin-right: 10px;
-    border-right: 1px solid rgba(255,255,255,0.35);
+    padding: 8px 16px 8px 0;
+  }
+  
+  span.description {
+    padding: 6px 0 8px 10px;
+    border-left: 1px solid rgba(255,255,255,0.35);
   }
   
   span.counter {
