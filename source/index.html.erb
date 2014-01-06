@@ -3,7 +3,7 @@ title: Pochour.com – Parmi les meilleures sources de nouvelles de moi en retar
 ---
 
 <% blog.articles.each do |article| %>
-<section id="<%= article.slug %>"<%= ' class="text"' if article.data['is_text'] %>>
+<section id="<%= article.slug %>"<%= article.data['is_text'] ? ' class="text"' : '' %>">
   <div class="info">
     <time datetime="<%= article.date.strftime("%Y-%m-%d") %>2013-10-28"><%= I18n.localize(article.date, format: "%-d %B %Y") %></time><% unless article.data['description'].nil? %><span class="description">
         <%= article.data['description'] %>

@@ -1,19 +1,8 @@
-section#avion {
-  background-image: url("../images/photo-8929.jpg");
+@each $image in avion, lisbonne, eglise, mude-1, mude-2, mude-3, plafonds, falaise, sardine, os, praca, abandonnee {
+  ##{$image} { background-image: url("../images/photo-#{$image}.jpg"); }
+  ##{$image}-thumbnail { background-image: url("../images/photo-#{$image}-menu-200x.jpg"); }
 }
 
-section#aeroport   { background-color: #D8D7A6; }
-section#portugal   { background-color: #a5d3dd; }
-section#personne   { background-color: #DDC8D0; }
-
-section#lisbonne   { background-image: url("../images/photo-8943.jpg"); }
-section#eglise     { background-image: url("../images/photo-8974.jpg"); }
-section#mude-1     { background-image: url("../images/photo-8987.jpg"); }
-section#mude-2     { background-image: url("../images/photo-8995.jpg"); }
-section#mude-3     { background-image: url("../images/photo-8993.jpg"); }
-section#plafonds   { background-image: url("../images/photo-plafonds.jpg"); }
-section#falaise    { background-image: url("../images/photo-9161.jpg"); }
-section#sardine    { background-image: url("../images/photo-9198.jpg"); }
-section#os         { background-image: url("../images/photo-9277.jpg"); }
-section#praca      { background-image: url("../images/photo-9331.jpg"); }
-section#abandonnee { background-image: url("../images/photo-9338.jpg"); }
+#aeroport, #aeroport-thumbnail { background-color: #D8D7A6; }
+#portugal, #portugal-thumbnail { background-color: #a5d3dd; }
+#personne, #personne-thumbnail { background-color: #DDC8D0; }

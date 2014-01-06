@@ -73,5 +73,11 @@ activate :blog do |blog|
   blog.default_extension = ".md"
 end
 
+require 'middleman-thumbnailer'
+activate :thumbnailer, 
+  :dimensions => {
+    :menu => '200x'
+  }
+
 Time.zone = "Madrid"
 I18n.default_locale = :fr

@@ -5,6 +5,7 @@ source 'http://rubygems.org'
 gem "middleman", "~>3.2.0"
 gem "middleman-livereload", "~> 3.1.0"
 gem "middleman-blog"
+gem 'middleman-thumbnailer', :git => 'git://github.com/nhemsley/middleman-thumbnailer.git'
 gem "i18n"
 
 group :development do
