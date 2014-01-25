@@ -1,4 +1,4 @@
-@each $image in avion, lisbonne, eglise, mude-1, mude-2, mude-3, plafonds, falaise, sardine, os, praca, abandonnee, azulejos, colimacon {
+@each $image in avion, lisbonne, eglise, mude-1, mude-2, mude-3, plafonds, falaise, sardine, os, praca, abandonnee, azulejos, colimacon, coimbra-haut, coimbra-bas {
   ##{$image} { background-image: url("../images/photo-#{$image}.jpg"); }
   ##{$image}-thumbnail { background-image: url("../images/photo-#{$image}-menu-200x.jpg"); }
 }
