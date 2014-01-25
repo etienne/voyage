@@ -1,4 +1,4 @@
-@each $image in avion, lisbonne, eglise, mude-1, mude-2, mude-3, plafonds, falaise, sardine, os, praca, abandonnee {
+@each $image in avion, lisbonne, eglise, mude-1, mude-2, mude-3, plafonds, falaise, sardine, os, praca, abandonnee, azulejos, colimacon {
   ##{$image} { background-image: url("../images/photo-#{$image}.jpg"); }
   ##{$image}-thumbnail { background-image: url("../images/photo-#{$image}-menu-200x.jpg"); }
 }
@@ -9,4 +9,4 @@
 #now, #now-thumbnail           { background-color: #bbb; }
 #lumiere, #lumiere-thumbnail   { background-color: #DDDAD1; }
 
-#lumiere.off { background-color: #222230; }
+#lumiere.off { background-color: #30353a; }

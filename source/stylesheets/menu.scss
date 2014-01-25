@@ -1,0 +1,73 @@
+div.all {
+  position: absolute;
+  height: 100%;
+  z-index: 100;
+  top: 16px;
+  -webkit-transition: left 0.4s ease;
+  
+  ul.posts {
+    position: absolute;
+    left: -9999px;
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    list-style: none;
+    
+    li {
+      float: left;
+      
+      & > a {
+        display: block;
+        float: left;
+        width: 92px;
+        height: 62px;
+        padding: 10px;
+        color: rgba(0,0,0,0.5);
+        font-size: 11px;
+        line-height: 16px;
+        overflow: hidden;
+        cursor: pointer;
+      
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+      
+        &.text {
+          background-image: url("../images/vignette.png");
+        }
+      
+        p {
+          margin: 0;
+        }
+      }
+      
+    }
+  }
+  
+  span.button {
+    position: absolute;
+    text-indent: -9999px;
+    width: 56px;
+    height: 32px;
+    margin-right: 20px;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-left: none;
+    background: url("../images/all.png") no-repeat 50% 0;
+    background-size: 50%;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: rgba(255,255,255,0.25);
+    }
+  }
+  
+  &.open {
+    span.button {
+      background-position: 50% -33px;
+    }
+  }
+}
