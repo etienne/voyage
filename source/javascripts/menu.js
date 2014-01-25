@@ -23,5 +23,10 @@ $(function(e) {
     }, 410);
     
     $('.main').moveTo($(this).attr('data-index'));
+    // Yuck
+    section = $('section')[$(this).attr('data-index') - 1];
+    if (!$(section).attr('id') && $(section).attr('data-id')) {
+      $(section).attr('id', $(section).attr('data-id'));
+    }
   });
 });
