@@ -33,7 +33,7 @@
           <% i = 0 %>
           <% blog.articles.each do |article| %>
           <li>
-            <a <%= article.data['is_text'] ? ' class="text"' : '' %> data-panel="<%= article.slug %>">
+            <a class="thumbnail <%= article.data['is_text'] ? ' text' : '' %>" data-panel="<%= article.slug %>">
               <%= article.title %>
             </a>
           </li>

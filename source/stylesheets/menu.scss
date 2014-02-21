@@ -19,7 +19,8 @@ div.menu {
       
       & > a {
         @extend .small-sans;
-
+        
+        background-color: #222;
         display: block;
         text-align: center;
         float: left;
