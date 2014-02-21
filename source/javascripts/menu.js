@@ -20,6 +20,6 @@ $(function(e) {
   $('div.menu ul.posts a').click(function() {
     window.setTimeout(function() {
       $('span.button').click();
-    }, 410);
+    }, 200);
   });
 });
