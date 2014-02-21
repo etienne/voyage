@@ -1,7 +1,0 @@
-.onepage-pagination li a:before{
-  background: rgba(255,255,255,0.85);
-}
-
-.onepage-pagination li a.active:before{
-  border-color: white;
-}

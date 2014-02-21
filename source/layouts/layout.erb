@@ -9,7 +9,7 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Pochour.com" %></title>
     
-    <%= stylesheet_link_tag "normalize", "all" %>
+    <%= stylesheet_link_tag "all" %>
     <%= javascript_include_tag  "all" %>
     <script type="text/javascript">
 
@@ -27,21 +27,21 @@
   </head>
   
   <body>
-    <div class="all">
-      <ul class="posts">
-        <% i = 0 %>
-        <% blog.articles.each do |article| %>
-        <li>
-          <a id="<%= article.slug %>-thumbnail"<%= article.data['is_text'] ? ' class="text"' : '' %> data-index="<%= i = i + 1 %>">
-            <%= article.body %>
-          </a>
-        </li>
-        <% end %>
-      </ul>
+    <div class="menu">
+      <div class="container">
+        <ul class="posts">
+          <% i = 0 %>
+          <% blog.articles.each do |article| %>
+          <li>
+            <a <%= article.data['is_text'] ? ' class="text"' : '' %> data-panel="<%= article.slug %>">
+              <%= article.title %>
+            </a>
+          </li>
+          <% end %>
+        </ul>
+      </div>
       <span class="button">Toutes les affaires</span>
     </div>
-    <div class="main">
-      <%= yield %>
-    </div>
+    <%= yield %>
   </body>
 </html>

@@ -7,13 +7,13 @@ $(function() {
     $('.main').moveTo(i);
   });
   
-  $('#lumiere').mousemove(function() {
+  $('section[data-panel=lumiere]').mousemove(function() {
     $(this).removeClass('off');
     if (lights_timeout != null) {
       window.clearTimeout(lights_timeout);
     }
     lights_timeout = window.setTimeout(function() {
-      ($('#lumiere').addClass('off'));
-    }, 8000);
+      ($('section[data-panel=lumiere]').addClass('off'));
+    }, 6000);
   });
 });
