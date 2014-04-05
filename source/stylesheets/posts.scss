@@ -1,13 +1,14 @@
-@each $image in avion, lisbonne, eglise, mude-1, mude-2, mude-3, plafonds, falaise, sardine, os, praca, abandonnee, azulejos, colimacon, coimbra-haut, coimbra-bas, coimbra-vert, republika, batalha, batalha-plafond, theatre, canal, flexitarien, porto-balcon, porto {
+@each $image in avion, lisbonne, eglise, mude-1, mude-2, mude-3, plafonds, falaise, sardine, os, praca, abandonnee, azulejos, colimacon, coimbra-haut, coimbra-bas, coimbra-vert, republika, batalha, batalha-plafond, theatre, canal, flexitarien, porto-balcon, porto, jesus, cygne {
   [data-panel=#{$image}].loaded { background-image: url("../images/photo-#{$image}.jpg"); }
   [data-panel=#{$image}].thumbnail.loaded { background-image: url("../images/photo-#{$image}-menu-200x.jpg"); }
 }
 
-[data-panel=aeroport] { background-color: #D8D7A6 !important; }
-[data-panel=portugal] { background-color: #a5d3dd !important; }
-[data-panel=personne] { background-color: #DDC8D0 !important; }
-[data-panel=now]      { background-color: #bbb !important; }
-[data-panel=lumiere]  { background-color: #DDDAD1 !important; }
-[data-panel=mormones] { background-color: #CDDDD1 !important; }
+[data-panel=aeroport]    { background-color: #D8D7A6 !important; }
+[data-panel=portugal]    { background-color: #a5d3dd !important; }
+[data-panel=personne]    { background-color: #DDC8D0 !important; }
+[data-panel=now]         { background-color: #bbb !important; }
+[data-panel=lumiere]     { background-color: #DDDAD1 !important; }
+[data-panel=mormones]    { background-color: #CDDDD1 !important; }
+[data-panel=francesinha] { background-color: #b7b29b !important; }
 
 [data-panel=lumiere].off { background-color: #30353a; }
