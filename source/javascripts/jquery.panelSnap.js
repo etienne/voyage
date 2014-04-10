@@ -11,7 +11,7 @@ if ( typeof Object.create !== 'function' ) {
 
 /*!
  * jQuery panelSnap
- * Version 0.11.0
+ * Version 0.12.0
  *
  * Requires:
  * - jQuery 1.7 or higher (no jQuery.migrate needed)
@@ -68,7 +68,6 @@ if ( typeof Object.create !== 'function' ) {
         self.$snapContainer = $(document.documentElement);
 
         var ua = navigator.userAgent;
-        // if(~ua.indexOf('WebKit') && !~ua.indexOf('Chrome')) {
         if(~ua.indexOf('WebKit')) {
           self.$snapContainer = $('body');
         }
@@ -101,6 +100,10 @@ if ( typeof Object.create !== 'function' ) {
       self.bindProxied(self.$eventContainer, 'mouseup', self.mouseUp);
 
       self.bindProxied($(window), 'resizestop', self.resize);
+
+      if(self.options.keyboardNavigation.enabled) {
+        self.bindProxied($(window), 'keydown', self.keyDown, self.$eventContainer);
+      }
 
       if(self.options.$menu !== false) {
         self.bindProxied($(self.options.$menu), 'click', self.captureMenuClick, self.options.menuSelector);
@@ -227,6 +230,34 @@ if ( typeof Object.create !== 'function' ) {
 
     },
 
+    keyDown: function(e) {
+
+      var self = this;
+
+      var nav = self.options.keyboardNavigation;
+
+      if (self.isSnapping) {
+        if(e.which == nav.previousPanelKey || e.which == nav.nextPanelKey) {
+          e.preventDefault();
+          return false;
+        }
+
+        return;
+      }
+
+      switch(e.which) {
+        case nav.previousPanelKey:
+          e.preventDefault();
+          self.snapTo('prev', nav.wrapAround);
+          break;
+        case nav.nextPanelKey:
+          e.preventDefault();
+          self.snapTo('next', nav.wrapAround);
+          break;
+      }
+
+    },
+
     resize: function(e) {
 
       var self = this;
@@ -244,10 +275,11 @@ if ( typeof Object.create !== 'function' ) {
     },
 
     captureMenuClick: function(e) {
+
       var self = this;
 
       var panel = $(e.currentTarget).data('panel');
-      var $target = self.getPanel('[data-panel=' + panel + ']');
+      var $target = self.getPanel('[data-panel="' + panel + '"]');
 
       self.snapToPanel($target);
 
@@ -256,12 +288,13 @@ if ( typeof Object.create !== 'function' ) {
     },
 
     snapToPanel: function($target) {
+
       var self = this;
 
       if (!($target instanceof jQuery)) {
         return;
       }
-      
+
       self.isSnapping = true;
 
       self.options.onSnapStart.call(self, $target);
@@ -277,6 +310,7 @@ if ( typeof Object.create !== 'function' ) {
       self.$snapContainer.stop(true).animate({
         scrollTop: scrollTarget
       }, self.options.slideSpeed, function() {
+
         self.scrollOffset = scrollTarget;
         self.isSnapping = false;
 
@@ -301,7 +335,7 @@ if ( typeof Object.create !== 'function' ) {
         var activeItemSelector = '> ' + self.options.menuSelector + '.active';
         $(activeItemSelector, self.options.$menu).removeClass('active');
 
-        var attribute = '[data-panel=' + $target.data('panel') + ']';
+        var attribute = '[data-panel="' + $target.data('panel') + '"]';
         var itemSelector = '> ' + self.options.menuSelector + attribute;
         var $itemToActivate = $(itemSelector, self.options.$menu);
         $itemToActivate.addClass('active');
@@ -448,7 +482,13 @@ if ( typeof Object.create !== 'function' ) {
     onSnapFinish: function(){},
     onActivate: function(){},
     directionThreshold: 50,
-    slideSpeed: 200
+    slideSpeed: 200,
+    keyboardNavigation: {
+      enabled: false,
+      nextPanelKey: 40,
+      previousPanelKey: 38,
+      wrapAround: true
+    }
   };
 
 })(jQuery, window, document);
