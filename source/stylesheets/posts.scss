@@ -1,4 +1,4 @@
-@each $image in avion, lisbonne, eglise, mude-1, mude-2, mude-3, plafonds, falaise, sardine, os, praca, abandonnee, azulejos, colimacon, coimbra-haut, coimbra-bas, coimbra-vert, republika, batalha, batalha-plafond, theatre, canal, flexitarien, porto-balcon, porto, jesus, cygne {
+@each $image in avion, lisbonne, eglise, mude-1, mude-2, mude-3, plafonds, falaise, sardine, os, praca, abandonnee, azulejos, colimacon, coimbra-haut, coimbra-bas, coimbra-vert, republika, batalha, batalha-plafond, theatre, canal, flexitarien, porto-balcon, porto, jesus, cygne, casa-musica-1, casa-musica-2, casa-musica-3, casa-musica-4 {
   [data-panel=#{$image}].loaded { background-image: url("../images/photo-#{$image}.jpg"); }
   [data-panel=#{$image}].thumbnail.loaded { background-image: url("../images/photo-#{$image}-menu-200x.jpg"); }
 }
