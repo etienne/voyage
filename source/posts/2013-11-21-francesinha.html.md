@@ -18,4 +18,6 @@ Une fois c'était un végétarien qui entre dans un restaurant à Porto et deman
 - Fromage
 - Sauce brune
 
-Le végétarien finit son assiette. Curieusement, il ne meurt pas (mais on ne peut pas en dire autant de son statut de végétarien).
+Le végétarien finit son assiette. Curieusement, il ne meurt pas.
+
+Mais en sortant, on lui confisque son permis de végétarien.
